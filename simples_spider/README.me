@@ -1,0 +1,17 @@
+## Install Instructions
+
+pip install scrapy
+scrapy startproject your_project_name
+cd your_project_name
+scrapy genspider name_of_the_spider url_to_be_crawled
+
+
+## Useful commands
+
+scrapy shell -> open a console for scraping
+fetch(url) -> fetches the website and read the html into the response param
+response.xpath("//h1") -> get all h1 headers
+response.xpath("//h1/a/text()").extract() -> list of all strings from h1/a
+response.xpath('//*[@class="tag"]') -> get all elements of the tag class
+scrapy crawl class_name -> crawl the url defined on the spider with this name
+On settings.py set ROBOTSTXT_OBEY to FALSE
